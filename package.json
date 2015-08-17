@@ -1,0 +1,13 @@
+{ "name": "netconf.js",
+  "version": "0.0.1",
+  "author": "Lamoni Finlayson <lamonif@gmail.com>",
+  "description": "A vendor-agnostic NETCONF client written for node.js",
+  "main": "./lib/client",
+  "engines": { "node": ">=0.8.7" },
+  "dependencies": {
+    "ssh2": "~0.3.6"
+  },
+  "keywords": [ "netconf", "juniper", "cisco", "networking" ],
+  "licenses": [ { "type": "MIT", "url": "https://github.com/lamoni/netconf.js/raw/master/LICENSE" } ],
+  "repository" : { "type": "git", "url": "http://github.com/lamoni/netconf.js.git" }
+}
