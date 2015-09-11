@@ -15,11 +15,12 @@ var nc = new Netconf({
     }
 });
 
-nc.sendOperationalCommand('text', 'show version', function (hostname, output) {
+nc.sendOperationalCommand('xml', 'show version', function (hostname, xml) {
 
-    console.log(output);
-    nc.sendOperationalCommandToSpecificHost(hostname, 'text', 'show system uptime', function (hostname, output) {
-        console.log(output);
+    console.log(xml);
+
+    nc.sendOperationalCommandToSpecificHost(hostname, 'text', 'show interfaces terse', function (hostname, xml) {
+       console.log(xml);
     });
 
 });
