@@ -5,7 +5,8 @@
   "main": "./lib/client",
   "engines": { "node": ">=0.8.7" },
   "dependencies": {
-    "ssh2": "~0.4.10"
+    "ssh2": "~0.4.10",
+    "xml2js": "~0.4.12"
   },
   "keywords": [ "netconf", "juniper", "cisco", "networking" ],
   "licenses": [ { "type": "MIT", "url": "https://github.com/lamoni/netconf.js/raw/master/LICENSE" } ],
