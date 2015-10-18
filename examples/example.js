@@ -6,22 +6,12 @@ var nc = new Netconf({
             username: 'lamoni',
             password: 'lamoni123',
             mode: 'multiple'
-        },
-        '172.16.200.131': {
-            username: 'lamoni',
-            password: 'lamoni123',
-            mode: 'single'
         }
     }
 });
 
-nc.sendOperationalCommand('xml', 'show version', function (hostname, xml) {
+nc.sendRPC('<command>show version</command>', function (hostname, xml) {
 
     console.log(xml);
 
-    nc.sendOperationalCommandToSpecificHost(hostname, 'text', 'show interfaces terse', function (hostname, xml) {
-       console.log(xml);
-    });
-
 });
-
