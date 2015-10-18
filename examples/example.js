@@ -7,11 +7,13 @@ var nc = new Netconf({
             password: 'lamoni123',
             mode: 'multiple'
         }
+    },
+    connect: function (hostname, capabilities) {
+        console.log(capabilities);
     }
 });
 
 nc.sendRPC('<command>show version</command>', function (hostname, xml) {
 
-    console.log(xml);
 
 });
